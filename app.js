@@ -12,7 +12,7 @@ const app = express();
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'RP738964$',
     database: 'C237_usersdb'
 });
 
@@ -159,6 +159,7 @@ app.get('/logout', (req, res) => {
 });
 
 // Starting the server
-app.listen(3000, () => {
-    console.log('Server started on port 3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port http://localhost:${PORT}`);
 });
